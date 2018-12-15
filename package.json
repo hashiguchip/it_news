@@ -1,0 +1,25 @@
+{
+    "name": "it_news",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev_server": "webpack-dev-server",
+        "watch": "webpack --watch",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "css-loader": "^2.0.1",
+        "ts-loader": "^5.3.1",
+        "typescript": "^3.2.2",
+        "vue": "^2.5.21",
+        "vue-loader": "^14.2.3",
+        "vue-template-compiler": "^2.5.21",
+        "webpack": "^4.27.1",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10"
+    }
+}
