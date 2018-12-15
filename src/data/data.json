@@ -1,0 +1,114 @@
+{
+    "news_sites": [
+        {
+            "name": "quit",
+            "category": "todo",
+            "url": "https://qiita.com/"
+        },
+        {
+            "name": "はてな(ITカテゴリー)",
+            "category": "todo",
+            "url": "http://b.hatena.ne.jp/hotentry/it"
+        },
+        {
+            "name": "HTML5Experts.jp",
+            "category": "todo",
+            "url": "https://html5experts.jp/"
+        },
+        {
+            "name": "TechFeed",
+            "category": "todo",
+            "url": "https://techfeed.io"
+        },
+        {
+            "name": "Menthas",
+            "category": "todo",
+            "url": "https://menthas.com/"
+        },
+        {
+            "name": "POSTD",
+            "category": "todo",
+            "url": "http://postd.cc/"
+        },
+        {
+            "name": "SELECK",
+            "category": "todo",
+            "url": "https://seleck.cc/"
+        },
+        {
+            "name": "geechs magazine（ギークスマガジン）",
+            "category": "todo",
+            "url": "https://geechs-magazine.com/"
+        },
+        {
+            "name": "UX MILK | クリエイターのためのUXメディア",
+            "category": "todo",
+            "url": "http://uxmilk.jp/"
+        },
+        {
+            "name": "Frontend Weekly",
+            "category": "todo",
+            "url": "https://frontendweekly.tokyo/"
+        },
+        {
+            "name": "TechCrunch Japan",
+            "category": "todo",
+            "url": "http://jp.techcrunch.com/"
+        },
+        {
+            "name": "クックパッド開発者ブログ",
+            "category": "todo",
+            "url": "http://techlife.cookpad.com/"
+        },
+        {
+            "name": "Developers.IO",
+            "category": "todo",
+            "url": "http://dev.classmethod.jp/"
+        },
+        {
+            "name": "Hatena Developer Blog",
+            "category": "todo",
+            "url": "http://developer.hatenastaff.com"
+        },
+        {
+            "name": "Social Change! ソニックガーデン SonicGarden 倉貫義人のブログ",
+            "category": "todo",
+            "url": "http://kuranuki.sonicgarden.jp/"
+        },
+        {
+            "name": "Mercari Engineering Blog",
+            "category": "todo",
+            "url": "https://tech.mercari.com/"
+        },
+        {
+            "name": "ひしだま's 技術メモページ",
+            "category": "todo",
+            "url": "http://www.ne.jp/asahi/hishidama/home/tech/index.html"
+        },
+        {
+            "name": "Stack Overflow",
+            "category": "todo",
+            "url": "http://stackoverflow.com/"
+        },
+        {
+            "name": "Stack Overflow(日本版)",
+            "category": "todo",
+            "url": "http://ja.stackoverflow.com/"
+        },
+        {
+            "name": "teratail【テラテイル】",
+            "category": "todo",
+            "url": "https://teratail.com/"
+        },
+        {
+            "name": "html5j ― 「つながる」「学べる」「盛り上がる」",
+            "category": "勉強会",
+            "url": "http://html5j.org/"
+        },
+        {
+            "name": "技術書典",
+            "category": "todo",
+            "url": "https://techbookfest.org/"
+        }
+    ]
+}
