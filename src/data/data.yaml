@@ -1,0 +1,7 @@
+news_sites:
+  - name:quita
+    url:https://qiita.com/
+  - name:はてな(ITカテゴリー)
+    url:http://b.hatena.ne.jp/hotentry/it
+  - name:techfeed
+    url:https://techfeed.io/main/realtime/now
