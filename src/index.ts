@@ -1,12 +1,18 @@
 import Vue from "vue";
 import Vuex from 'vuex'
 import HelloComponent from "./components/Hello.vue";
+import ListPageComponent from "./components/ListPage.vue";
+//import AboutPageComponent from "./components/AboutPage.vue";
+import siteList from './backendAPI/data.json';
 
 Vue.use(Vuex);
 
+
 const store = new Vuex.Store({
     state: {
-        count: 0
+        count: 0,
+        page: 'top',
+        list: siteList,
     },
     mutations: {
         increment: state => state.count++,
@@ -26,6 +32,8 @@ let v = new Vue({
     `,
     data: {name: "World"},
     components: {
-        HelloComponent
+        HelloComponent,
+        ListPageComponent,
+       // AboutPageComponent
     }
 });
