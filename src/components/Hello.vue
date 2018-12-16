@@ -1,7 +1,7 @@
 <!-- src/components/Hello.vue -->
 
 <template>
-    <div>
+    <div class="parents">
         <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
         <button @click="decrement">-</button>
         <button @click="increment">+</button>
@@ -19,7 +19,9 @@
             }
         },
         methods: {
-            increment() { this.enthusiasm++; },
+            increment() {
+                this.enthusiasm++;
+            },
             decrement() {
                 if (this.enthusiasm > 1) {
                     this.enthusiasm--;
@@ -34,8 +36,10 @@
     });
 </script>
 
-<style>
-    .greeting {
-        font-size: 20px;
+<style lang="scss">
+    .parents {
+        .greeting {
+            font-size: 220px;
+        }
     }
 </style>
