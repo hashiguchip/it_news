@@ -4,12 +4,11 @@
     <ul id="example-1">
         <h2>おすすめ it news site</h2>
         <li v-for="item in list.news_sites">
-            <div>
-                {{ item.name }}
-            </div>
-            <div>
-                {{ item.url }}
-            </div>
+            <a v-bind:href=item.url>
+                <div>
+                    {{ item.name }}
+                </div>
+            </a>
         </li>
     </ul>
 </template>
