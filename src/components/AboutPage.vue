@@ -3,14 +3,20 @@
 <template>
     <div class="parents">
         <div class="greeting"></div>
-        <h2>このサイトは...</h2>
+        <h2>このサイトについて</h2>
         <div>このサイトはITのnewsを集めたサイトです</div>
+        <div>うたんら</div>
+        <div>かんたｒ</div>
+        <div>TODO</div>
     </div>
 </template>
 
 <script lang="ts">
     import Vue from "vue";
-    import Vuex from 'vuex'
+    import Vuex from 'vuex';
+
+    export default Vue.extend({});
+
 </script>
 
 <style lang="scss">

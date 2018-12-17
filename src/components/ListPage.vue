@@ -2,8 +2,14 @@
 
 <template>
     <ul id="example-1">
-        <li v-for="item in list">
-            {{ item.url }}
+        <h2>おすすめ it news site</h2>
+        <li v-for="item in list.news_sites">
+            <div>
+                {{ item.name }}
+            </div>
+            <div>
+                {{ item.url }}
+            </div>
         </li>
     </ul>
 </template>
