@@ -57,9 +57,9 @@ let v = new Vue({
     computed: {
         currentComponent: function () {
             if (this.currentComponentsData == 'list') {
-                return 'about-page-component';
-            } else {
                 return 'list-page-component';
+            } else {
+                return 'about-page-component';
             }
         }
     }
