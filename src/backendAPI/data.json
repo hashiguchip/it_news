@@ -1,6 +1,41 @@
 {
     "news_sites": [
         {
+            "name": "CNET",
+            "category": "todo",
+            "url": "https://japan.cnet.com/"
+        },
+        {
+            "name": "ZDNet",
+            "category": "todo",
+            "url": "https://japan.zdnet.com/"
+        },
+        {
+            "name": "ferret [フェレット]",
+            "category": "todo",
+            "url": "https://ferret-plus.com/"
+        },
+        {
+            "name": "mizchi's blog",
+            "category": "todo",
+            "url": "https://mizchi.hatenablog.com/"
+        },
+        {
+            "name": "CodeZine（コードジン）",
+            "category": "todo",
+            "url": "https://codezine.jp/"
+        },
+        {
+            "name": "dev.to",
+            "category": "todo",
+            "url": "dev.to"
+        },
+        {
+            "name": "todo",
+            "category": "todo",
+            "url": "todo"
+        },
+        {
             "name": "quit",
             "category": "todo",
             "url": "https://qiita.com/"
