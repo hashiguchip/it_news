@@ -51,4 +51,7 @@
 </script>
 
 <style lang="scss">
+    #navbar {
+        background-color: #4ea9fa;
+    }
 </style>
