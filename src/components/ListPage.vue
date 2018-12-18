@@ -30,7 +30,9 @@
 </script>
 
 <style lang="scss">
+    //@import "~bulmaswatch/superhero/variables";
     @import '~bulma/bulma';
+    //@import "~bulmaswatch/superhero/overrides";
 
     #sites {
         .site {

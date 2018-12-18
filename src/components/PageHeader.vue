@@ -52,6 +52,9 @@
 
 <style lang="scss">
     #navbar {
-        background-color: #4ea9fa;
+        background-color: #303a28;
+        .title{
+            color: #f5f8ff;
+        }
     }
 </style>
