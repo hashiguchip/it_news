@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import HelloComponent from "./components/Hello.vue";
 import ListPageComponent from "./components/ListPage.vue";
 import AboutPageComponent from "./components/AboutPage.vue";
+import PageHeaderComponent from "./components/PageHeader.vue";
+import PageFooterComponent from "./components/PageFooter.vue";
 import * as siteList from './backendAPI/data.json';
 
 Vue.use(Vuex);
@@ -25,14 +27,26 @@ let v = new Vue({
     store,//vuex
     template: `
     <div>
+        <page-header-component :name="name" :initialEnthusiasm="5" />
         <button  v-on:click="changeTab">コンポーネント切り替えbutton</button>
         <!--Name: <input v-model="name" type="text">-->
         <!--<hello-component :name="name" :initialEnthusiasm="5" />-->
         <!--<list-page-component :name="name" :initialEnthusiasm="5" />-->
         <!--<about-page-component :name="name" :initialEnthusiasm="5" />-->
-        <keep-alive>
-          <component v-bind:is="currentComponent"></component>
-        </keep-alive>
+        <section class="hero is-medium intro">
+        <div class="hero-body">
+            <div class="container">
+                <div class="intro-columns">
+                    <div class="intro-column is-content">
+                        <keep-alive>
+                          <component v-bind:is="currentComponent"></component>
+                        </keep-alive>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <page-footer-component :name="name" :initialEnthusiasm="5" />
     </div>
     `,
     data: {
@@ -51,6 +65,8 @@ let v = new Vue({
     },
     components: {
         //HelloComponent,
+        PageHeaderComponent,
+        PageFooterComponent,
         ListPageComponent,
         AboutPageComponent
     },

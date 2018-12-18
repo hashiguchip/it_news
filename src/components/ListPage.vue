@@ -1,14 +1,16 @@
 <!-- src/components/Hello.vue -->
 
 <template>
-    <ul id="example-1">
-        <h2>おすすめ it news site</h2>
+    <ul id="sites">
+        <h2 class="title">おすすめ it news site</h2>
         <li v-for="item in list.news_sites">
-            <a v-bind:href=item.url>
-                <div>
-                    {{ item.name }}
-                </div>
-            </a>
+            <div class="site">
+                <a v-bind:href=item.url>
+                    <div class="subtitle">
+                        {{item.name}}
+                    </div>
+                </a>
+            </div>
         </li>
     </ul>
 </template>
@@ -28,9 +30,11 @@
 </script>
 
 <style lang="scss">
-    .parents {
-        .greeting {
-            font-size: 120px;
+    @import '~bulma/bulma';
+
+    #sites {
+        .site {
+            margin-top: 3vh;
         }
     }
 </style>
