@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "bulma": "^0.7.2",
         "css-loader": "^2.0.1",
         "node-sass": "^4.11.0",
         "sass-loader": "^7.1.0",
