@@ -10,10 +10,10 @@
                 </a>
             </li>
             <li>
-                <button v-on:click="changeTab">
+                <a v-on:click="changeTab">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
                     <span>このサイトについて</span>
-                </button>
+                </a>
             </li>
             <li>
                 <a>
@@ -69,14 +69,14 @@
             decrement() {
                 this.$store.commit('decrement')
             },
-            changeTab: function () {
-                if (this.currentComponentsData == 'list') {
-                    this.currentComponentsData = 'about';
-                } else {
-                    this.currentComponentsData = 'list';
-                }
-                return true;
-            }
+//            changeTab: function () {
+//                if (this.currentComponentsData == 'list') {
+//                    this.currentComponentsData = 'about';
+//                } else {
+//                    this.currentComponentsData = 'list';
+//                }
+//                return true;
+//            }
         },
         computed: {
             exclamationMarks(): string {
