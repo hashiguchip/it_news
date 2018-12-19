@@ -5,6 +5,8 @@ import ListPageComponent from "./components/ListPage.vue";
 import AboutPageComponent from "./components/AboutPage.vue";
 import PageHeaderComponent from "./components/PageHeader.vue";
 import PageFooterComponent from "./components/PageFooter.vue";
+import HeaderMenuComponent from "./components/HeaderMenu.vue";
+import HeaderHeroComponent from "./components/HeaderHero.vue";
 import * as siteList from './backendAPI/data.json';
 
 Vue.use(Vuex);
@@ -14,8 +16,10 @@ const store = new Vuex.Store({
         count: 0,
         page: 'top',
         list: siteList,
+        currentPage: 'list',
     },
     mutations: {
+        //changePage: state => state.currentPage = 'about',
         increment: state => state.count++,
         decrement: state => state.count--
     }
@@ -28,23 +32,25 @@ let v = new Vue({
     template: `
     <div>
         <page-header-component :name="name" :initialEnthusiasm="5" />
-        <button  v-on:click="changeTab">コンポーネント切り替えbutton</button>
+        <!--<button  v-on:click="changeTab">コンポーネント切り替えbutton</button>-->
         <!--Name: <input v-model="name" type="text">-->
         <!--<hello-component :name="name" :initialEnthusiasm="5" />-->
         <!--<list-page-component :name="name" :initialEnthusiasm="5" />-->
         <!--<about-page-component :name="name" :initialEnthusiasm="5" />-->
+        <header-menu-component :name="name" :initialEnthusiasm="5" />
+        <header-hero-component :name="name" :initialEnthusiasm="5" />
         <section class="hero is-medium intro">
-        <div class="hero-body">
-            <div class="container">
-                <div class="intro-columns">
-                    <div class="intro-column is-content">
-                        <keep-alive>
-                          <component v-bind:is="currentComponent"></component>
-                        </keep-alive>
+            <div class="hero-body">
+                <div class="container">
+                    <div class="intro-columns">
+                        <div class="intro-column is-content">
+                            <keep-alive>
+                              <component v-bind:is="currentComponent"></component>
+                            </keep-alive>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
         <page-footer-component :name="name" :initialEnthusiasm="5" />
     </div>
@@ -68,7 +74,9 @@ let v = new Vue({
         PageHeaderComponent,
         PageFooterComponent,
         ListPageComponent,
-        AboutPageComponent
+        AboutPageComponent,
+        HeaderMenuComponent,
+        HeaderHeroComponent
     },
     computed: {
         currentComponent: function () {
