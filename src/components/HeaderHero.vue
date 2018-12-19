@@ -1,15 +1,18 @@
 <!-- src/components/Hello.vue -->
 
 <template>
-    <nav id="navbar" class="navbar has-shadow is-spaced">
-        <div class="container">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <h1 class="title">IT news よりすぐり</h1>
-                </a>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    {{ currentPage }}
+                </h1>
+                <h2 class="subtitle">
+
+                </h2>
             </div>
         </div>
-    </nav>
+    </section>
 </template>
 
 <script lang="ts">
@@ -43,18 +46,17 @@
             exclamationMarks(): string {
                 return Array(this.enthusiasm + 1).join('!');
             },
-            count(): string {
-                return this.$store.state.count
+            currentPage(): string {
+                return this.$store.state.currentPage
             }
         }
     });
 </script>
 
 <style lang="scss">
-    /*#navbar {*/
-        /*background-color: #303a28;*/
-        /*.title{*/
-            /*color: #f5f8ff;*/
-        /*}*/
+    /*.parents {*/
+    /*.greeting {*/
+    /*font-size: 120px;*/
+    /*}*/
     /*}*/
 </style>
