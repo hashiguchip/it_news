@@ -2,7 +2,6 @@
 
 <template>
     <ul id="sites">
-        <h2 class="title">おすすめ it news site</h2>
         <li v-for="item in list.news_sites">
             <div class="site">
                 <a v-bind:href=item.url>
@@ -21,11 +20,13 @@
 
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
-        data() {
-            return {
-                list: this.$store.state.list,
+//        data() {
+//        },
+        computed: {
+            list(): any {
+                return this.$store.state.siteList.default;
             }
-        },
+        }
     });
 </script>
 
