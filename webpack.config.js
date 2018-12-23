@@ -3,6 +3,7 @@ var webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -13,7 +14,7 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',　
+                loader: 'vue-loader',
                 options: {
                     loaders: {
                         //この書き方がダメぽい。。TODO:調査
@@ -62,8 +63,13 @@ module.exports = {
         }
     },
     devServer: {
-        historyApiFallback: true,
-        noInfo: true
+        //historyApiFallback: true,
+        //noInfo: true,
+        open: true,//ブラウザを自動で開く
+        openPage: "index.html",//自動で指定したページを開く
+        contentBase: path.join(__dirname, './'),// HTML等コンテンツのルートディレクトリ
+        watchContentBase: true,//コンテンツの変更監視をする
+        //port: 3000, // ポート番号
     },
     performance: {
         hints: false
