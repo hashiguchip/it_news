@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from 'vuex'
 import ListPageComponent from "./components/ListPage.vue";
 import AboutPageComponent from "./components/AboutPage.vue";
+import FavoritePageComponent from "./components/FavoritePage.vue";
 import PageHeaderComponent from "./components/PageHeader.vue";
 import PageFooterComponent from "./components/PageFooter.vue";
 import HeaderMenuComponent from "./components/HeaderMenu.vue";
@@ -69,6 +70,7 @@ let v = new Vue({
         PageFooterComponent,
         ListPageComponent,
         AboutPageComponent,
+        FavoritePageComponent,
         HeaderMenuComponent,
         HeaderHeroComponent
     },

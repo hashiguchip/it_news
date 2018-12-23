@@ -3,7 +3,6 @@
 <template>
     <div class="parents">
         <div class="greeting"></div>
-        <h2>このサイトについて</h2>
         <div>このサイトはITのnewsを集めたサイトです</div>
         <div>うたんら</div>
         <div>かんたｒ</div>
