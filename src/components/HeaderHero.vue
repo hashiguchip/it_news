@@ -51,9 +51,9 @@
 </script>
 
 <style lang="scss">
-    /*.parents {*/
-    /*.greeting {*/
-    /*font-size: 120px;*/
-    /*}*/
-    /*}*/
+
+    .hero.is-primary {
+        background-color: #008fcd;
+    }
+
 </style>
