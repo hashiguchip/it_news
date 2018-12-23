@@ -48,9 +48,11 @@ let v = new Vue({
                 <div class="container">
                     <div class="intro-columns">
                         <div class="intro-column is-content">
-                            <keep-alive>
-                              <component v-bind:is="currentComponent"></component>
-                            </keep-alive>
+                            <transition name="component-fade" mode="out-in">
+                                <keep-alive>
+                                  <component v-bind:is="currentComponent"></component>
+                                </keep-alive>
+                            </transition>
                         </div>
                     </div>
                 </div>

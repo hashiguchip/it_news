@@ -44,7 +44,7 @@
         },
         computed: {
             currentPage(): string {
-                return this.$store.state.currentPage
+                return this.$store.state.currentPage;
             }
         }
     });
