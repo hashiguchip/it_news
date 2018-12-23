@@ -40,4 +40,13 @@
             margin-top: 3vh;
         }
     }
+
+    .component-fade-enter-active,
+    .component-fade-leave-active {
+        transition: opacity .15s ease;
+    }
+
+    .component-fade-enter, .component-fade-leave-to {
+        opacity: 0; //mean start from 0
+    }
 </style>
