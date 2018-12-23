@@ -33,7 +33,7 @@
 //                }
 //            },
             increment() {
-                this.$store.commit('increment')
+                this.$store.commit('changePage',"about")
             },
             decrement() {
                 this.$store.commit('decrement')

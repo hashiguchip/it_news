@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Vuex from 'vuex'
-import HelloComponent from "./components/Hello.vue";
 import ListPageComponent from "./components/ListPage.vue";
 import AboutPageComponent from "./components/AboutPage.vue";
 import PageHeaderComponent from "./components/PageHeader.vue";
@@ -15,13 +14,17 @@ const store = new Vuex.Store({
     state: {
         count: 0,
         page: 'top',
-        list: siteList,
+        siteList: siteList,
         currentPage: 'list',
     },
     mutations: {
         //changePage: state => state.currentPage = 'about',
         increment: state => state.count++,
-        decrement: state => state.count--
+        decrement: state => state.count--,
+        changePage(state, obj) {
+            // 状態を変更する
+            state.currentPage = obj.currentPage
+        }
     }
 })
 
@@ -59,18 +62,9 @@ let v = new Vue({
         name: "World",
         currentComponentsData: 'list'
     },
-    methods: {
-        changeTab: function () {
-            if (this.currentComponentsData == 'list') {
-                this.currentComponentsData = 'about';
-            } else {
-                this.currentComponentsData = 'list';
-            }
-            return true;
-        }
-    },
+    // methods: {
+    // },
     components: {
-        //HelloComponent,
         PageHeaderComponent,
         PageFooterComponent,
         ListPageComponent,
@@ -80,11 +74,7 @@ let v = new Vue({
     },
     computed: {
         currentComponent: function () {
-            if (this.currentComponentsData == 'list') {
-                return 'list-page-component';
-            } else {
-                return 'about-page-component';
-            }
+            return this.$store.state.currentPage + '-page-component';
         }
     }
 });

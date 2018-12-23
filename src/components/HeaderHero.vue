@@ -43,9 +43,6 @@
             },
         },
         computed: {
-            exclamationMarks(): string {
-                return Array(this.enthusiasm + 1).join('!');
-            },
             currentPage(): string {
                 return this.$store.state.currentPage
             }
