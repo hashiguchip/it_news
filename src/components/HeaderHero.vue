@@ -5,10 +5,11 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
-                    {{ currentPage }}
+                    <transition name="fade" mode="in-out">
+                        <p v-if="show">{{ currentPage }}</p>{{animation}}
+                    </transition>
                 </h1>
                 <h2 class="subtitle">
-
                 </h2>
             </div>
         </div>
@@ -24,17 +25,11 @@
         data() {
             return {
                 enthusiasm: this.initialEnthusiasm,
+                show: true,
+                nowPage: ''
             }
         },
         methods: {
-//            increment() {
-//                this.enthusiasm++;
-//            },
-//            decrement() {
-//                if (this.enthusiasm > 1) {
-//                    this.enthusiasm--;
-//                }
-//            },
             increment() {
                 this.$store.commit('increment')
             },
@@ -44,7 +39,21 @@
         },
         computed: {
             currentPage(): string {
+                if (this.nowPage !== this.$store.state.currentPage) {
+                    this.show = false
+                }
+                this.nowPage = this.$store.state.currentPage;
                 return this.$store.state.currentPage;
+            },
+            //todo : animation Library とか使って書き換える
+            animation(): string {
+                if (!this.show) {
+                    let _this = this;
+                    setTimeout(function () {
+                        _this.show = true
+                    }, 300, _this);
+                }
+                return '';
             }
         }
     });
@@ -54,6 +63,16 @@
 
     .hero.is-primary {
         background-color: #008fcd;
+    }
+
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to {
+        opacity: 0;
     }
 
 </style>
