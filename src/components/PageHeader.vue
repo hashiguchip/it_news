@@ -5,6 +5,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
+                    <img id="logo" :src="image"/>
                     <h1 class="title">IT news よりすぐり</h1>
                 </a>
             </div>
@@ -15,12 +16,15 @@
 <script lang="ts">
     import Vue from "vue";
     import Vuex from 'vuex'
+    import aaa from "./logo.png"
 
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
         data() {
+            console.log(aaa);
             return {
                 enthusiasm: this.initialEnthusiasm,
+                image: aaa
             }
         },
         methods: {
@@ -33,7 +37,7 @@
 //                }
 //            },
             increment() {
-                this.$store.commit('changePage',"about")
+                this.$store.commit('changePage', "about")
             },
             decrement() {
                 this.$store.commit('decrement')
@@ -51,10 +55,8 @@
 </script>
 
 <style lang="scss">
-    /*#navbar {*/
-        /*background-color: #303a28;*/
-        /*.title{*/
-            /*color: #f5f8ff;*/
-        /*}*/
-    /*}*/
+    #logo {
+        max-height: 2.7rem;
+        margin-right: 0.5rem;
+    }
 </style>
