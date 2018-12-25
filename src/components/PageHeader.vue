@@ -22,6 +22,7 @@
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
         data() {
+            console.log("foooooooooooooooo");
             return {
                 enthusiasm: this.initialEnthusiasm,
                 image: image
