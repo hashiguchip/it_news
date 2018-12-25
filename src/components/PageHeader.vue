@@ -5,7 +5,8 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
-                    <img id="logo" :src="image"/>
+                    <!--todo: remove !!!/it_news/!!!-->
+                    <img id="logo" :src="'/it_news/'+image"/>
                     <h1 class="title">IT news よりすぐり</h1>
                 </a>
             </div>
@@ -16,15 +17,14 @@
 <script lang="ts">
     import Vue from "vue";
     import Vuex from 'vuex'
-    import aaa from "./logo.png"
+    import image from "./logo.png"
 
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
         data() {
-            console.log(aaa);
             return {
                 enthusiasm: this.initialEnthusiasm,
-                image: aaa
+                image: image
             }
         },
         methods: {
