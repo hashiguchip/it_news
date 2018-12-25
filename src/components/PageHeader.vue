@@ -6,7 +6,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item" href="/">
                     <!--todo: remove !!!/it_news/!!!-->
-                    <img id="logo" :src="'/it_news/'+image"/>
+                    <img id="logo" :src="'/it_news'+image"/>
                     <h1 class="title">IT news よりすぐり</h1>
                 </a>
             </div>
