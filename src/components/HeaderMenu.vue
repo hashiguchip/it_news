@@ -10,9 +10,9 @@
                 </a>
             </li>
             <li>
-                <a v-on:click="changeTab('about')">
+                <a v-on:click="changeTab('it-news')">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-                    <span>このサイトについて</span>
+                    <span>IT業界ニュース</span>
                 </a>
             </li>
             <li>
@@ -37,6 +37,12 @@
                 <a v-on:click="changeTab('blog')">
                     <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
                     <span>ブログ・ネタ</span>
+                </a>
+            </li>
+            <li>
+                <a v-on:click="changeTab('about')">
+                    <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                    <span>このサイトについて</span>
                 </a>
             </li>
         </ul>

@@ -2,7 +2,7 @@
 
 <template>
     <ul id="sites">
-        <li v-for="item in list.news_sites">
+        <li v-for="item in list">
             <div class="site">
                 <a v-bind:href=item.url>
                     <div class="subtitle">
@@ -24,13 +24,11 @@
 //        },
         computed: {
             list(): any {
-//                return this.$store.state.siteList.default.news_sites.filter(
-//                    function (sites: any) {
-//                        //return sites.category.includes()
-//                        return true;//all
-//                    }
-//                )
-                return this.$store.state.siteList.default;
+                return this.$store.state.siteList.default.news_sites.filter(
+                    function (sites: any) {
+                        return sites.category.includes(1)
+                    }
+                )
             }
         }
     });
