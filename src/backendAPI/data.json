@@ -2,137 +2,254 @@
     "news_sites": [
         {
             "name": "CNET",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://japan.cnet.com/"
         },
         {
             "name": "ZDNet",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://japan.zdnet.com/"
         },
         {
+            "name": "TechRepublic Japan",
+            "category": [
+                1,
+                2,
+                3
+            ],
+            "url": "https://japan.techrepublic.com/"
+        },
+        {
             "name": "ferret [フェレット]",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://ferret-plus.com/"
         },
         {
             "name": "mizchi's blog",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://mizchi.hatenablog.com/"
         },
         {
             "name": "CodeZine（コードジン）",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://codezine.jp/"
         },
         {
             "name": "dev.to",
-            "category": "todo",
-            "url": "dev.to"
+            "category": [
+                1,
+                2,
+                3
+            ],
+            "url": "https://dev.to/"
         },
         {
-            "name": "todo",
-            "category": "todo",
-            "url": "todo"
-        },
-        {
-            "name": "quit",
-            "category": "todo",
+            "name": "Qiita",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://qiita.com/"
         },
         {
             "name": "はてな(ITカテゴリー)",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://b.hatena.ne.jp/hotentry/it"
         },
         {
+            "name": "Yahoo(ITカテゴリー)",
+            "category": [
+                1,
+                2,
+                3
+            ],
+            "url": "https://news.yahoo.co.jp/hl?c=c_sci"
+        },
+        {
             "name": "HTML5Experts.jp",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://html5experts.jp/"
         },
         {
             "name": "TechFeed",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://techfeed.io"
         },
         {
             "name": "Menthas",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://menthas.com/"
         },
         {
             "name": "POSTD",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://postd.cc/"
         },
         {
             "name": "SELECK",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://seleck.cc/"
         },
         {
             "name": "geechs magazine（ギークスマガジン）",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://geechs-magazine.com/"
         },
         {
             "name": "UX MILK | クリエイターのためのUXメディア",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://uxmilk.jp/"
         },
         {
             "name": "Frontend Weekly",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://frontendweekly.tokyo/"
         },
         {
             "name": "TechCrunch Japan",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://jp.techcrunch.com/"
         },
         {
             "name": "クックパッド開発者ブログ",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://techlife.cookpad.com/"
         },
         {
             "name": "Developers.IO",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://dev.classmethod.jp/"
         },
         {
             "name": "Hatena Developer Blog",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://developer.hatenastaff.com"
         },
         {
             "name": "Social Change! ソニックガーデン SonicGarden 倉貫義人のブログ",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://kuranuki.sonicgarden.jp/"
         },
         {
             "name": "Mercari Engineering Blog",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://tech.mercari.com/"
         },
         {
             "name": "ひしだま's 技術メモページ",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://www.ne.jp/asahi/hishidama/home/tech/index.html"
         },
         {
             "name": "Stack Overflow",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://stackoverflow.com/"
         },
         {
             "name": "Stack Overflow(日本版)",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "http://ja.stackoverflow.com/"
         },
         {
             "name": "teratail【テラテイル】",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://teratail.com/"
         },
         {
@@ -142,7 +259,11 @@
         },
         {
             "name": "技術書典",
-            "category": "todo",
+            "category": [
+                1,
+                2,
+                3
+            ],
             "url": "https://techbookfest.org/"
         }
     ]
