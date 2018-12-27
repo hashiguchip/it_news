@@ -22,6 +22,34 @@
             "url": "https://japan.techrepublic.com/"
         },
         {
+            "name": "builder by ZDNet Japan",
+            "category": [
+                1
+            ],
+            "url": "https://builder.japan.zdnet.com/"
+        },
+        {
+            "name": "ギズモード・ジャパン | 日本最大級のガジェット＆テクノロジーサイト",
+            "category": [
+                1
+            ],
+            "url": "https://www.gizmodo.jp/"
+        },
+        {
+            "name": "GIGAZINE（ギガジン）",
+            "category": [
+                1
+            ],
+            "url": "http://gigazine.net/"
+        },
+        {
+            "name": "TechCrunch Japan - 最新のテクノロジーとスタートアップ・Webに関するニュースを配信するブログメディア",
+            "category": [
+                1
+            ],
+            "url": "https://jp.techcrunch.com/"
+        },
+        {
             "name": "ferret [フェレット]",
             "category": [
             ],
