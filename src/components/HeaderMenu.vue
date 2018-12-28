@@ -4,46 +4,46 @@
     <div class="tabs is-toggle is-fullwidth">
         <ul>
             <li>
-                <a v-on:click="changeTab('list')">
+                <router-link to="all">
                     <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
                     <span>一覧</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('it-news')">
+                <router-link to="itnews">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
                     <span>IT業界ニュース</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('favorite')">
+                <router-link to="favorite">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
                     <span>お気に入り</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('programing')">
+                <router-link to="programming">
                     <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
                     <span>技術</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('gadget')">
+                <router-link to="gadget">
                     <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
                     <span>ガジェット</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('blog')">
+                <router-link to="blog">
                     <span class="icon is-small"><i class="far fa-file-alt" aria-hidden="true"></i></span>
                     <span>ブログ・ネタ</span>
-                </a>
+                </router-link>
             </li>
             <li>
-                <a v-on:click="changeTab('about')">
+                <router-link to="about">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
                     <span>このサイトについて</span>
-                </a>
+                </router-link>
             </li>
         </ul>
     </div>
