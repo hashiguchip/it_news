@@ -8,9 +8,33 @@ import PageHeaderComponent from "./components/PageHeader.vue";
 import PageFooterComponent from "./components/PageFooter.vue";
 import HeaderMenuComponent from "./components/HeaderMenu.vue";
 import HeaderHeroComponent from "./components/HeaderHero.vue";
+import VueRouter from 'vue-router'
 import * as siteList from './backendAPI/data.json';
 
+Vue.use(VueRouter)
 Vue.use(Vuex);
+
+// 2. ルートをいくつか定義します
+// 各ルートは 1 つのコンポーネントとマッピングされる必要があります。
+// このコンポーネントは実際の `Vue.extend()`、
+// またはコンポーネントオプションのオブジェクトでも構いません。
+const routes = [
+    {path: '/all', component: ListPageComponent},
+    {path: '/itnews', component: ItNewsPageComponent},
+    {path: '/about', component: AboutPageComponent},
+    {path: '/itnews', component: ItNewsPageComponent},
+    {path: '/itnews', component: ItNewsPageComponent},
+]
+
+// 3. ルーターインスタンスを作成して、ルートオプションを渡します
+// 追加のオプションをここで指定できますが、
+// この例ではシンプルにしましょう
+
+const router = new VueRouter({
+    mode: (false) ? 'history' : 'hash',//if 本番 history
+    routes // `routes: routes` の短縮表記
+})
+
 
 const store = new Vuex.Store({
     state: {
@@ -30,9 +54,16 @@ const store = new Vuex.Store({
     }
 })
 
+// 4. root となるインスタンスを作成してマウントします
+// アプリケーション全体がルーターを認知できるように、
+// ルーターをインジェクトすることを忘れないでください。
+// const app = new Vue({
+//     router
+// }).$mount('#app')
 
 let v = new Vue({
     el: "#app",
+    router,//vue-router
     store,//vuex
     template: `
     <div>
@@ -50,9 +81,7 @@ let v = new Vue({
                     <div class="intro-columns">
                         <div class="intro-column is-content">
                             <transition name="component-fade" mode="out-in">
-                                <keep-alive>
-                                  <component v-bind:is="currentComponent"></component>
-                                </keep-alive>
+                                <router-view></router-view>
                             </transition>
                         </div>
                     </div>
