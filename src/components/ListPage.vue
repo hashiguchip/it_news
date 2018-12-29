@@ -4,6 +4,7 @@
     <ul id="sites">
         <li v-for="item in list.news_sites">
             <div class="site">
+                <font-awesome-icon :icon="favoriteIcon"pull="left" class="star"></font-awesome-icon>
                 <a v-bind:href=item.url>
                     <div class="subtitle">
                         {{item.name}}
@@ -18,6 +19,9 @@
     import Vue from "vue";
     import Vuex from 'vuex'
 
+    import {faStar} from '@fortawesome/free-solid-svg-icons'
+    import {faStar as faUnStar} from '@fortawesome/free-regular-svg-icons'
+
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
 //        data() {
@@ -31,6 +35,9 @@
 //                    }
 //                )
                 return this.$store.state.siteList.default;
+            },
+            favoriteIcon() {//if favorite solid
+                return faUnStar
             }
         }
     });
@@ -44,6 +51,9 @@
     #sites {
         .site {
             margin-top: 3vh;
+            .star{
+                color: #77761b;
+            }
         }
     }
 

@@ -12,6 +12,16 @@ import VueRouter from 'vue-router'
 import VueMeta from 'vue-meta'
 import * as siteList from './backendAPI/data.json';
 
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faStar} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faStar)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.config.productionTip = false
+
 Vue.use(VueRouter)
 Vue.use(VueMeta, {
     keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
@@ -83,7 +93,7 @@ let v = new Vue({
         <!--<about-page-component :name="name" :initialEnthusiasm="5" />-->
         <header-menu-component :name="name" :initialEnthusiasm="5" />
         <header-hero-component :name="name" :initialEnthusiasm="5" />
-        <section class="hero is-medium intro">
+        <section class="hero is-medium intro">     
             <div class="hero-body">
                 <div class="container">
                     <div class="intro-columns">
