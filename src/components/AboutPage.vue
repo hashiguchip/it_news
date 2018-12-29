@@ -14,7 +14,14 @@
     import Vue from "vue";
     import Vuex from 'vuex';
 
-    export default Vue.extend({});
+    export default Vue.extend({
+        metaInfo: {
+            // if no subcomponents specify a metaInfo.title, this title will be used
+            title: 'About',
+            // all titles will be injected into this template
+            titleTemplate: '%s | IT news よりすぐり'
+        }
+    });
 
 </script>
 

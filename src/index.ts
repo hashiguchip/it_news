@@ -9,9 +9,16 @@ import PageFooterComponent from "./components/PageFooter.vue";
 import HeaderMenuComponent from "./components/HeaderMenu.vue";
 import HeaderHeroComponent from "./components/HeaderHero.vue";
 import VueRouter from 'vue-router'
+import VueMeta from 'vue-meta'
 import * as siteList from './backendAPI/data.json';
 
 Vue.use(VueRouter)
+Vue.use(VueMeta, {
+    keyName: 'metaInfo', // the component option name that vue-meta looks for meta info on.
+    attribute: 'data-vue-meta', // the attribute name vue-meta adds to the tags it observes
+    ssrAttribute: 'data-vue-meta-server-rendered', // the attribute name that lets vue-meta know that meta info has already been server-rendered
+    tagIDKeyName: 'vmid' // the property name that vue-meta uses to determine whether to overwrite or append a tag
+})
 Vue.use(Vuex);
 
 // 2. ルートをいくつか定義します
@@ -19,6 +26,7 @@ Vue.use(Vuex);
 // このコンポーネントは実際の `Vue.extend()`、
 // またはコンポーネントオプションのオブジェクトでも構いません。
 const routes = [
+    {path: '/', component: ListPageComponent},
     {path: '/all', component: ListPageComponent},
     {path: '/itnews', component: ItNewsPageComponent},
     {path: '/about', component: AboutPageComponent},
@@ -111,5 +119,17 @@ let v = new Vue({
         currentComponent: function () {
             return this.$store.state.currentPage + '-page-component';
         }
+    },
+    metaInfo: {
+        title: 'IT news よりすぐり',
+        titleTemplate: '%s | IT業界人はここに掲載されているサイトを抑えておけば間違いない!...そんなサイトです',
+        htmlAttrs: {
+            lang: 'ja',
+        },
+        meta: [
+            //{charset: 'utf-8'},//読み込み時には文utf-8と書いていないためか字化けするので一旦html側に書いた。
+            {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+            {name: 'description', content: 'IT業界人はここに掲載されているサイトを抑えておけば間違いない!...そんなサイトです'}
+        ]
     }
 });
