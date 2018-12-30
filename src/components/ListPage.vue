@@ -2,9 +2,18 @@
 
 <template>
     <ul id="sites">
-        <li v-for="item in list.news_sites">
+        <li v-for="item in list">
             <div class="site">
-                <font-awesome-icon :icon="favoriteIcon"pull="left" class="star"></font-awesome-icon>
+                <font-awesome-icon :icon="favoriteIconOn"
+                                   v-if="item.favorite" pull="left"
+                                   v-on:click="favorite(false,item.id)"
+                                   class="starOn">
+                </font-awesome-icon>
+                <font-awesome-icon :icon="favoriteIconOff"
+                                   v-else pull="left"
+                                   v-on:click="favorite(true,item.id)"
+                                   class="starOff">
+                </font-awesome-icon>
                 <a v-bind:href=item.url>
                     <div class="subtitle">
                         {{item.name}}
@@ -24,10 +33,23 @@
 
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
-//        data() {
-//        },
+        data() {
+            return {
+                enthusiasm: this.initialEnthusiasm,
+            }
+        },
+        methods: {
+            favorite: function (flg: boolean, id: number) {
+                let arg = {
+                    id: id,
+                    flg: flg
+                }
+                this.$store.commit('favorite', arg)
+            }
+        },
         computed: {
             list(): any {
+                let test = this.$store.state.count
 //                return this.$store.state.siteList.default.news_sites.filter(
 //                    function (sites: any) {
 //                        //return sites.category.includes()
@@ -36,7 +58,10 @@
 //                )
                 return this.$store.state.siteList.default;
             },
-            favoriteIcon() {//if favorite solid
+            favoriteIconOn() {//if favorite solid
+                return faStar
+            },
+            favoriteIconOff() {//if favorite solid
                 return faUnStar
             }
         }
@@ -51,7 +76,10 @@
     #sites {
         .site {
             margin-top: 3vh;
-            .star{
+            .starOn {
+                color: #feec00;
+            }
+            .starOff {
                 color: #77761b;
             }
         }
@@ -62,7 +90,8 @@
         transition: opacity .15s ease;
     }
 
-    .component-fade-enter, .component-fade-leave-to {
+    .component-fade-enter,
+    .component-fade-leave-to {
         opacity: 0; //mean start from 0
     }
 </style>

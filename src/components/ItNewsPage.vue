@@ -20,11 +20,14 @@
 
     export default Vue.extend({
         props: ['name', 'initialEnthusiasm'],
-//        data() {
-//        },
+        data() {
+            return {
+                enthusiasm: this.initialEnthusiasm,
+            }
+        },
         computed: {
             list(): any {
-                return this.$store.state.siteList.default.news_sites.filter(
+                return this.$store.state.siteList.default.filter(
                     function (sites: any) {
                         return sites.category.includes(1)
                     }

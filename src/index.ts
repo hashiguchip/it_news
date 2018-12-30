@@ -14,10 +14,10 @@ import * as siteList from './backendAPI/data.json';
 
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 library.add(faStar)
-
+//global component
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
@@ -39,8 +39,8 @@ const routes = [
     {path: '/', component: ListPageComponent},
     {path: '/all', component: ListPageComponent},
     {path: '/itnews', component: ItNewsPageComponent},
+    {path: '/favorite', component: FavoritePageComponent},
     {path: '/about', component: AboutPageComponent},
-    {path: '/itnews', component: ItNewsPageComponent},
     {path: '/itnews', component: ItNewsPageComponent},
 ]
 
@@ -57,7 +57,6 @@ const router = new VueRouter({
 const store = new Vuex.Store({
     state: {
         count: 0,
-        page: 'top',
         siteList: siteList,
         currentPage: 'list',
     },
@@ -68,6 +67,16 @@ const store = new Vuex.Store({
         changePage(state, obj) {
             // 状態を変更する
             state.currentPage = obj.currentPage
+        },
+        favorite(state, arg) {
+            state.count++ //リアクティブにならないので暫定的にこれをつける。。
+            //Vue.set(state.siteList[0], 'favorite', true)
+            for (let site in state.siteList) {
+                if (state.siteList[site].id == arg.id) {
+                    Vue.set(state.siteList[site], 'favorite', arg.flg)
+                    //state.siteList[site].favorite = arg.flg
+                }
+            }
         }
     }
 })
