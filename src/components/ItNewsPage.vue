@@ -4,7 +4,7 @@
     <ul id="sites">
         <li v-for="item in list">
             <div class="site">
-                <a v-bind:href=item.url>
+                <a v-bind:href=item.url target="_blank">
                     <div class="subtitle">
                         {{item.name}}
                     </div>

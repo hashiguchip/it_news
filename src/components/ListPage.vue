@@ -14,7 +14,7 @@
                                    v-on:click="favorite(true,item.id)"
                                    class="starOff">
                 </font-awesome-icon>
-                <a v-bind:href=item.url>
+                <a v-bind:href=item.url target="_blank">
                     <div class="subtitle">
                         {{item.name}}
                     </div>

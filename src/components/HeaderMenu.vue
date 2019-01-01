@@ -4,6 +4,12 @@
     <div class="tabs is-toggle is-fullwidth">
         <ul>
             <li>
+                <router-link to="favorite">
+                    <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+                    <span>お気に入り</span>
+                </router-link>
+            </li>
+            <li>
                 <router-link to="all">
                     <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
                     <span>一覧</span>
@@ -13,12 +19,6 @@
                 <router-link to="itnews">
                     <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
                     <span>IT業界ニュース</span>
-                </router-link>
-            </li>
-            <li>
-                <router-link to="favorite">
-                    <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-                    <span>お気に入り</span>
                 </router-link>
             </li>
             <li>
