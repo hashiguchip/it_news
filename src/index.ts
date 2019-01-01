@@ -36,7 +36,7 @@ Vue.use(Vuex);
 // このコンポーネントは実際の `Vue.extend()`、
 // またはコンポーネントオプションのオブジェクトでも構いません。
 const routes = [
-    {path: '/', component: ListPageComponent},
+    {path: '/', component: FavoritePageComponent},
     {path: '/all', component: ListPageComponent},
     {path: '/itnews', component: ItNewsPageComponent},
     {path: '/favorite', component: FavoritePageComponent},
